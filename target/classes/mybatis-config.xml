@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>
+	<properties>  
+	    <property name="dialect" value="mysql" />  
+	    <property name="pageSqlId" value=".*Page$" />  
+	</properties>
+	<settings>
+    	<setting name="lazyLoadingEnabled" value="false"/>
+        <setting name="aggressiveLazyLoading" value="true"/>
+    </settings>
+    <typeAliases>
+    	
+     <!-- base -->
+     	<typeAlias alias="CommAttach" type="com.modules.base.entity.CommAttach"/>
+        <typeAlias alias="CommDict" type="com.modules.base.entity.CommDict"/>
+        <typeAlias alias="CommDictSearch" type="com.modules.base.entity.so.CommDictSearch"/>
+        <typeAlias alias="CommDictArea" type="com.modules.base.entity.CommDictArea"/>
+        <typeAlias alias="CommValidate" type="com.modules.base.entity.CommValidate"/>
+        <typeAlias alias="CommParam" type="com.modules.base.entity.CommParam"/>
+        <typeAlias alias="CommSequence" type="com.modules.base.entity.CommSequence"/>
+        <typeAlias alias="CommSMS" type="com.modules.base.entity.CommSMS"/>
+        <typeAlias alias="CommFeedback" type="com.modules.base.entity.CommFeedback"/>
+        <typeAlias alias="CommCategory" type="com.modules.base.entity.CommCategory"/>
+        <typeAlias alias="MobileConfig" type="com.modules.service.entity.MobileConfig"/>
+         <!-- Admin -->
+		<typeAlias alias="AdminInfo" type="com.modules.service.entity.AdminInfo"/>
+		<typeAlias alias="AdminMenu" type="com.modules.service.entity.AdminMenu"/>
+       <!-- User -->       
+        <typeAlias alias="UserInfo" type="com.modules.base.entity.UserInfo"/>
+        <typeAlias alias="UserInfoSearch" type="com.modules.base.entity.so.UserInfoSearch"/>
+        <typeAlias alias="UserLogin" type="com.modules.base.entity.UserLogin"/>  
+      
+         <!-- Info -->
+    </typeAliases>
+</configuration>
