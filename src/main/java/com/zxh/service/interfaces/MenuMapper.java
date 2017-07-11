@@ -3,6 +3,8 @@ package com.zxh.service.interfaces;
 import com.zxh.entity.dao.Menu;
 import com.zxh.entity.dao.MenuExample;
 import java.util.List;
+
+import com.zxh.entity.dto.MenuDto;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -29,4 +31,6 @@ public interface MenuMapper {
     int updateByPrimaryKeySelective(Menu record);
 
     int updateByPrimaryKey(Menu record);
+
+    MenuDto findParentTree(Long id);
 }

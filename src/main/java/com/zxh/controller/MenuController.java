@@ -1,6 +1,7 @@
 package com.zxh.controller;
 
 import com.zxh.entity.dao.Menu;
+import com.zxh.entity.dto.MenuDto;
 import com.zxh.service.MenuService;
 import com.zxh.service.interfaces.MenuMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class MenuController {
     @RequestMapping("/index")
     public String index(){
         Menu menu=menuService.selectById(2L);
-        String a="1";
+        MenuDto menuDto=menuService.findParentTree(2L);
         return "/index";
     }
 }
