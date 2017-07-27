@@ -272,14 +272,4 @@
       modify_time = #{modifyTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
-
-  <!--递归返回上级菜单 -->
-  <select id="findParentTree" resultType="com.zxh.entity.dto.MenuDto">
-    with cte as(
-        select id,name from menu where id=#{id}
-        UNION ALL
-        select a.id,a.name from menu a join cte b on a.id=b.parent_id
-    )
-    select id,name from cte;
-  </select>
 </mapper>
